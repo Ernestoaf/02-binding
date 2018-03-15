@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+.tarjeta{
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid rosybrown;
+    box-shadow: 5px 5px 5px 5px grey;
+    border-radius: 5px;
+}
+
+.aprobado{
+    background-color: green;
+    color: white;
+    padding:10px;
+    border: 1px solid red;
+}
+
+.suspenso{
+    background-color: red;
+    color: white;
+    padding:10px;
+    border: 1px solid green;
+}

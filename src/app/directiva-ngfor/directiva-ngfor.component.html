@@ -1,0 +1,12 @@
+<div class="tarjeta">
+  <h2>Ejemplo de directiva</h2>
+  <hr>
+  <h3>Clasificacion de la Liga</h3>
+
+  <ul>
+    <!-- Creamos una variable local equip del array equipos -->
+    <li *ngFor="let eqp of equipos">{{eqp}}</li>
+  </ul>
+  <h3>Goleadores</h3>
+  <h4 *ngFor ="let j of jugadores">{{j.nombre}} {{j.apellidos}}</h4>
+</div>

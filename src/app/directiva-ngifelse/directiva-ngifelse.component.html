@@ -1,0 +1,18 @@
+<div class="tarjeta">
+  <h2>Ejemplo de directiva *ngIf</h2>
+  <hr>
+
+  <!-- Clase de Bootstrap -->
+  <div class="form-group">
+    <label>Nombre y Apellidos</label>
+    <!-- comtrola una expresionq que si es cierta o no,
+       rendereiza el contenido del componente -->
+    <input type="text" class="form-control" [(ngModel)]="nombre">
+  </div>
+
+  <button class="btn btn-primary" *ngIf="nombre; else desactivado" >Enviar</button>
+
+  <ng-template #desactivado>
+    <button class="btn btn-primary" disabled>Enviar</button>
+  </ng-template>
+</div>

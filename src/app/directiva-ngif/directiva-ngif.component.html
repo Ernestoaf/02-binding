@@ -1,0 +1,16 @@
+<div class="tarjeta">
+  <h2>Ejemplo de directiva</h2>
+  <hr>
+
+  <!-- Clase de Bootstrap -->
+  <div class="form-group">
+    <label>Nombre y Apellidos</label>
+    <!-- comtrola una expresionq que si es cierta o no,
+       rendereiza el contenido del componente -->
+    <input type="text" class="forma-control" [(ngModel)]="nombre">
+  </div>
+
+  <!-- lo evalua como si fuenra un condicional, si existe nombre muestra todo este contenido 
+  es decir cuando nombre toma valor, aprece el boton de enviar-->
+  <button class="btn btn-primary" *ngIf="nombre" >Enviar</button>
+</div>

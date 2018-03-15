@@ -1,0 +1,23 @@
+<div class="tarjeta">
+  <h2>Ejemplo de directiva ngSwitch</h2>
+  <hr>
+  <ul *ngFor="let j of jugadores"
+      [ngSwitch]="j.equipo">
+      <!-- Aqui utilizamos comillas simples dentro de las dobles porque 
+        equipo es string y tenemos que ponerle un string -->
+
+        <!-- con esto lo pintaria si el equipo es cleveland -->
+    <li *ngSwitchCase="'Cleveland'" class="cl">
+      <span>{{j.nombre}}{{j.apellidos}}</span>
+      <span>{{j.equipo}}</span>      
+    </li>
+    <li *ngSwitchCase="'San Antonio'" class="sa">
+        <span>{{j.nombre}}{{j.apellidos}}</span>
+      <span>{{j.equipo}}</span>      
+      </li>
+      <li *ngSwitchCase="'Memphis'" class="mp">
+          <span>{{j.nombre}}{{j.apellidos}}</span>
+          <span>{{j.equipo}}</span>      
+        </li>
+  </ul>
+</div>

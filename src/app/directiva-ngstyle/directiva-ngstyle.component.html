@@ -1,0 +1,12 @@
+<div class="tarjeta">
+<h2>Ejemplo de directiva ngStyle</h2>
+<hr>
+<div class="form-group">
+  <label for="puntuacion"></label>
+  <input type="number" class="form-control"
+        [(ngModel)]="puntuacion">
+</div>
+<hr>
+<h3>Puntuacion obtenida:
+   <span [ngStyle]="{color:setColor()}">{{puntuacion}}</span></h3>
+</div>

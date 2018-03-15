@@ -1,0 +1,24 @@
+<div class="tarjeta">
+  <h2>Ejemplo de directiva ngClass</h2>
+  <hr>
+  <div class="form-group">
+    <label for="puntuacion"></label>
+    <input type="text" class="form-control" [(ngModel)]="puntuacion">
+  </div>
+  <hr>
+  <!-- Si no existe puntuacion no aparece el bloque de codigo -->
+  <div *ngIf="puntuacion">
+    <h3 *ngIf="puntuacion >=0 && puntuacion<=10; else aviso" [ngClass]="{aprobado: puntuacion>=5, 
+                    suspenso: puntuacion < 5}">
+      Puntuación obtenida {{puntuacion}} </h3>
+
+    <ng-template #aviso>
+      <h3 *ngIf="puntuacion>10">
+        Introduzca un valor menor o igual a 10
+      </h3>
+      <h3 *ngIf="puntuacion<0">
+        Introduzca un valor mayor o igual a 0
+      </h3>
+    </ng-template>
+  </div>
+</div>
